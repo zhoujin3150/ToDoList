@@ -16,6 +16,7 @@
 $(document).ready(function(){
   $("#input").blur(function(){
     $("#display").append("<li><input type='checkbox'><span>" + Value("#input") + "</span></li>");
+    $("#input").val("");
   });
 });
 function Value(id) {
