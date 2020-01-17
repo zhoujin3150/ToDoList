@@ -13,27 +13,5 @@
 <ul id="display"></ul>
 <button>Clean Up</button>
 
-<script>
-$(document).ready(function(){
-  $("#input").blur(function(){
-    $("#display").append("<li><input type='checkbox' class='checkbox'><span class='item'>" + Value("#input") + "</span></li>");
-    $("#input").val("");
-    $(".checkbox").click(function(){
-      $(this).next().css({"text-decoration": "line-through"});
-      });
-  });
-});
-$(document).ready(function(){
-  $("button").click(function(){
-    $("ul").empty();
-  });
-});
-function Value(id) {
-  var value = $(id).val();
-  return value;
-}
-
-</script>
-
 </body>
 </html>
