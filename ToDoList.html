@@ -11,12 +11,18 @@
     <input id="input" class="inputBar" type="text" name="keyword">
 </div>
 <ul id="display"></ul>
+<button>Clean Up</button>
 
 <script>
 $(document).ready(function(){
   $("#input").blur(function(){
     $("#display").append("<li><input type='checkbox'><span>" + Value("#input") + "</span></li>");
     $("#input").val("");
+  });
+});
+$(document).ready(function(){
+  $("button").click(function(){
+    $("ul").empty();
   });
 });
 function Value(id) {
