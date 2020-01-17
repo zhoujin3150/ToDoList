@@ -7,13 +7,22 @@
 </head>
 
 <body>
-<div>
-    <input id="input" class="inputBar" type="text" name="keyword">
-</div>
-
-<div>
-    <ul id="list"></ul>
-</div>
+    <div>
+        <input id="input" class="inputBar" type="text" name="keyword">
+    </div>
+    <div id="display"></div>
+    
+    <script>
+    $(document).ready(function(){
+      $("#input").blur(function(){
+        $("#display").text(Value("#input"));
+      });
+    });
+    function Value(id) {
+      var value = $(id).val();
+      return value;
+    }
+    </script>
 
 </body>
 </html>

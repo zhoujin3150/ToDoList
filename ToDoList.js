@@ -1,6 +1,8 @@
 $(document).ready(function(){
     $("#input").blur(function(){
-        $("ul").append("<il></il><br>");
+        var content = document.getElementById("input").value;
+        var checkBox = addCheckBox();
+        $("ul").append("<il><input type='checkbox'></input>" + content +"</il><br>");
     });
 });
 
@@ -8,9 +10,13 @@ function addRow(id){
 
 }
 
-function addCheckBox(id){
-    var row;
+function addCheckBox(){
     var checkBox = $('<input type="checkbox" />');
-    $(row).append(checkBox);
-    return row;
+    return checkBox;
+}
+
+function addContent(){
+    var rawContent = $("#input");
+    var content = rawContent;
+    return content;
 }
